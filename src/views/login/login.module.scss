@@ -1,0 +1,163 @@
+
+@use '@cssFonts' as *;
+@use '@cssVariables' as *;
+
+
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+
+.loginContainer {
+  height: 100vh;           
+  display: flex;
+  flex-direction: column;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  background-color: $bg-page;
+  width: 100%;
+  font-family: 'Segoe UI', Roboto, sans-serif;    
+}
+
+.loginLogo {
+  font-size: 64px;
+  color: $text-color;
+  margin-bottom: 20px;
+}
+
+.loginTitle {
+  color:  #f0f0f0 !important;
+  margin-bottom: 24px;
+  font-weight: 600;
+  text-align: center;
+}
+.loginlabel{
+  color: #f0f0f0;
+}
+
+.loginCard {
+  width: 100%;
+  max-width: 400px;
+  background-color: $bg-card;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-radius: $border-radius;
+}
+
+.loginInput {
+  background-color: $bg-page;
+  color: $text-color;
+  border: 1px solid $input-border;
+  border-radius: $border-radius;
+  padding: 0.6rem 0.75rem;
+  font-size: 14px;
+
+  &::placeholder {
+    color: $text-muted;
+  }
+
+  &:hover {
+    border-color: $input-focus;
+    background-color: #2d2d2d;
+  }
+
+  &:focus,
+  &:focus-within {
+    border-color: $input-focus;
+    box-shadow: 0 0 0 2px rgba(88, 166, 255, 0.3);
+    outline: none;
+  }
+}
+
+.signinBtn {
+  background-color: $primary-color;
+  border-color: $primary-color;
+  font-weight: 600;
+  border-radius: $border-radius;
+  padding: 0.6rem 0;
+  margin-top: 0.5rem;
+  color: #fff;
+  transition: all 0.2s ease;
+
+  &:hover,
+  &:focus {
+    background-color: $primary-hover;
+    border-color: $primary-hover;
+    color: #2c2a2a;
+  }
+}
+
+.divider {
+  border-color: white !important;
+  color: white !important;
+  margin: 16px 0;
+  font-weight: 500;
+  text-align: center;
+}
+
+.googleBtn {
+  background-color: #272727!important;
+  border: 1px solid $input-border;
+  color: $text-color!important;
+  font-weight: 500;
+  border-radius: $border-radius;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: #2d2d2d;
+    color: #fff;
+  }
+}
+
+.bottomLinks {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 14px;
+  color: $text-color;
+
+  a {
+    color: $primary-color;
+    font-weight: 500;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.footerLinks {
+  margin-top: 40px;
+  color: $text-muted;
+  font-size: 12px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  a {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .loginCard {
+    padding: 24px;
+  }
+
+  .loginLogo {
+    font-size: 48px;
+  }
+}
