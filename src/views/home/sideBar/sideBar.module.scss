@@ -1,0 +1,130 @@
+.sidebar {
+  background-color: #0d1117;
+  padding: 16px;
+  width: 300px;
+  height: 100vh;
+  border-top: 1px solid #30363d;
+  border-right: 1px solid #30363d;
+  color: #c9d1d9;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.userSection {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #30363d;
+  cursor: pointer;
+  transition: color 0.2s;
+
+  &:hover .username {
+    color: #58a6ff;
+  }
+}
+
+.username {
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+
+.dropdownIcon {
+  margin-left: auto;
+  font-size: 0.8rem;
+  color: #8b949e;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sectionTitle {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #8b949e;
+  text-transform: uppercase;
+}
+
+.newButton {
+  background-color: #238636 !important;
+  color: #c9d1d9 !important;
+  border: none !important;
+  border-radius: 6px;
+  font-weight: 500;
+  padding: 4px 12px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: #2ea043 !important;
+  }
+}
+
+.searchInput {
+  background-color: #0d1117 !important;
+  border: 1px solid #30363d !important;
+  color: #c9d1d9 !important;
+  border-radius: 6px;
+  padding: 6px 8px;
+  margin-bottom: 8px;
+
+  &::placeholder {
+    color: #8b949e;
+  }
+
+  &:hover {
+    border-color: #58a6ff;
+  }
+
+  &:focus {
+    border-color: #58a6ff;
+    box-shadow: 0 0 0 2px rgba(88, 166, 255, 0.3);
+    outline: none;
+  }
+}
+
+.repoList {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  .repoItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.2s, border 0.2s;
+
+    &:hover {
+      background-color: #21262d;
+    }
+
+    &.active {
+      background-color: #161b22;
+      border: 1px solid #58a6ff;
+      font-weight: 600;
+    }
+
+    .repoIcon {
+      color: #8b949e;
+      font-size: 0.9rem;
+    }
+  }
+}

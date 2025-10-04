@@ -1,0 +1,104 @@
+.repoExplorer {
+  background-color: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  overflow: auto;
+  color: #c9d1d9;
+  width: 70%;
+  margin-left: 12%;
+}
+
+.commitInfoContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid #30363d;
+}
+
+.commitInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.avatar {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.commitMessage {
+  font-weight: 600;
+  color: #58a6ff;
+}
+
+.commitTime {
+  color: #8b949e;
+  font-size: 14px;
+}
+
+.commitCount {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background-color: #21262d;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: 14px;
+}
+
+.commitIcon {
+  fill: #8b949e;
+}
+
+.commitCountText {
+  color: #c9d1d9;
+}
+
+.repoName {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid #30363d;
+  gap: 8px;
+  
+  span:first-child {
+    font-weight: 600;
+  }
+  
+  span:last-child {
+    color: #8b949e;
+  }
+}
+
+.fileListHeader {
+  display: flex;
+  padding: 16px;
+  border-bottom: 1px solid #30363d;
+  font-weight: 200;
+  font-family: -apple-system, "system-ui", "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+.fileNameHeader {
+  flex: 1;
+}
+
+.fileCommitHeader {
+  width: 200px;
+  margin-right: 24.5%;
+}
+
+.fileTimeHeader {
+  width: 150px;
+  text-align: right;
+  margin-right: 8%;
+}
+
+.loading {
+  padding: 16px;
+  text-align: center;
+}
+
+

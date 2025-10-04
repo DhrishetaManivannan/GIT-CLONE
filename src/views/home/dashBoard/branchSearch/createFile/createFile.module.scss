@@ -1,0 +1,246 @@
+/* GitHub-like color palette (existing) */
+$github-bg-color: #0d1117;
+$github-border-color: #30363d;
+$github-link-color: #58a6ff;
+$github-text-color: #c9d1d9;
+$github-secondary-text-color: #8b949e;
+$github-header-bg: #161b22;
+$github-green-btn-bg: #238636;
+$github-green-btn-hover: #2ea043;
+$github-red-btn-bg: #da3633;
+$github-red-btn-hover: #f85149;
+$github-input-bg: #010409;
+$font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+
+/* Container covering full viewport */
+.createFileContainer {
+  background-color: $github-bg-color;
+  padding: 16px;
+  min-height: 90vh;
+  width: 100vw;
+  box-sizing: border-box;
+  font-family: $font-family;
+  color: $github-text-color;
+  overflow-y: auto;
+}
+
+/* Top bar + breadcrumb + file input + actions */
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid $github-border-color;
+  background-color: $github-header-bg;
+  border-radius: 6px 6px 0 0;
+  padding: 8px 16px;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: $github-secondary-text-color;
+
+  :global(.ant-breadcrumb-link) {
+    color: $github-text-color;
+    font-weight: 600;
+  }
+}
+
+.fileNameInput {
+  background-color: $github-input-bg !important;
+  border: 1px solid $github-border-color !important;
+  color: $github-text-color !important;
+  border-radius: 6px !important;
+  width: 250px;
+  margin-left: 8px;
+
+  &::placeholder {
+    color: $github-secondary-text-color;
+  }
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.cancelButton {
+  background-color: transparent !important;
+  border-color: $github-border-color !important;
+  color: $github-text-color !important;
+  &:hover {
+    background-color: $github-border-color !important;
+    color: $github-text-color !important;
+  }
+}
+
+.commitButton {
+  background-color: $github-green-btn-bg !important;
+  border-color: $github-green-btn-bg !important;
+  color: #ffffff !important;
+  &:hover {
+    background-color: $github-green-btn-hover !important;
+    border-color: $github-green-btn-hover !important;
+  }
+}
+
+/* Editor wrapper + controls */
+.editorWrapper {
+  border: 1px solid $github-border-color;
+  border-top: none;
+  background-color: $github-bg-color;
+}
+
+.editorControls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid $github-border-color;
+  padding: 8px 16px;
+  background-color: $github-header-bg;
+}
+
+.editorTabs {
+  :global(.ant-tabs-nav) {
+    margin: 0 !important;
+  }
+
+  :global(.ant-tabs-tab) {
+    color: $github-secondary-text-color;
+    padding: 8px 12px;
+  }
+
+  :global(.ant-tabs-tab.ant-tabs-tab-active) {
+    .ant-tabs-tab-btn {
+      color: $github-text-color;
+    }
+  }
+
+  :global(.ant-tabs-tab-btn) {
+    font-weight: 600;
+  }
+
+  :global(.ant-tabs-ink-bar) {
+    background-color: $github-link-color;
+  }
+}
+
+.settings {
+  display: flex;
+  gap: 16px;
+  color: $github-secondary-text-color;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.codeEditor {
+  background-color: $github-bg-color !important;
+  border: none !important;
+  color: $github-text-color !important;
+  height: 400px;
+  resize: vertical;
+  font-family: monospace;
+}
+
+/* ---------- Commit Modal / Popup Styles ---------- */
+.ant-modal {
+  background-color: $github-bg-color;
+
+  .ant-modal-header {
+    background-color: $github-header-bg;
+    border-bottom: 1px solid $github-border-color;
+  }
+
+  .ant-modal-title {
+    color: $github-text-color;
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  .ant-modal-body {
+    padding: 24px 24px 16px;
+
+    .commitMessageHeader {
+      display: flex;
+      flex-direction: column;
+
+      h4 {
+        margin-bottom: 8px;
+        font-size: 14px;
+        font-weight: 600;
+        color: $github-text-color;
+      }
+
+      p {
+        margin-bottom: 12px;
+        font-size: 13px;
+        color: $github-secondary-text-color;
+      }
+
+      .ant-input {
+        background-color: $github-input-bg !important;
+        border: 1px solid $github-border-color !important;
+        border-radius: 6px !important;
+        color: $github-text-color !important;
+        font-size: 14px;
+        margin-bottom: 16px;
+
+        &::placeholder {
+          color: $github-secondary-text-color;
+        }
+      }
+
+      .ant-radio-group {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        .ant-radio-wrapper {
+          color: $github-text-color;
+          font-size: 13px;
+          line-height: 1.4;
+        }
+
+        .ant-radio-inner {
+          border-color: $github-border-color;
+        }
+
+        .ant-radio-checked .ant-radio-inner {
+          border-color: $github-link-color;
+          background-color: $github-link-color;
+        }
+      }
+    }
+  }
+
+  .ant-modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    background-color: $github-bg-color;
+    border-top: 1px solid $github-border-color;
+
+    .ant-btn-primary {
+      background-color: $github-green-btn-bg !important;
+      border-color: $github-green-btn-bg !important;
+      color: #fff !important;
+
+      &:hover {
+        background-color: $github-green-btn-hover !important;
+        border-color: $github-green-btn-hover !important;
+      }
+    }
+
+    .ant-btn-dangerous {
+      background-color: $github-red-btn-bg !important;
+      border-color: $github-red-btn-bg !important;
+      color: #fff !important;
+
+      &:hover {
+        background-color: $github-red-btn-hover !important;
+        border-color: $github-red-btn-hover !important;
+      }
+    }
+  }
+}

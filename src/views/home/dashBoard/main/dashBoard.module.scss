@@ -1,0 +1,121 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  height: 130vh;
+  width: 100vw;
+  background-color: #0d1117;
+  color: #c9d1d9;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow: auto;
+
+  .navbar {
+    flex-shrink: 0;
+  }
+
+
+.fullPageSpinner {
+ 
+  height: 100%;
+  width: 100%;
+  
+  :global(.ant-spin-container) {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.loadingState {
+
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  background-color: #22272e;
+  padding: 50px;
+}
+
+  .mainContentWrapper {
+    display: flex;
+    flex: 1;
+    overflow: auto;
+    background-color: #000000;
+
+  
+    .sidebar {
+      width: 240px; 
+      max-width: 30%; 
+      background-color: #161b22;
+      border-right: 1px solid #30363d;
+      padding: 16px;
+      overflow: auto;
+
+      &::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: #30363d;
+        border-radius: 4px;
+      }
+    }
+
+  
+    .mainContentArea {
+      flex: 1; 
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+      overflow: auto;
+      background-color: #0d1117;
+      min-width: 0;
+
+    
+      .home {
+        flex: 0 0 70%; 
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+   
+      }
+
+      .repoContent, .editor {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+
+      &::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: #0d1117;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: #30363d;
+        border-radius: 4px;
+      }
+    }
+  }
+
+  .branchAndSearchContainer,
+  .repoExplorer {
+    background-color: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    padding: 12px;
+  }
+}
+.loadingState,
+.errorState {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  background-color: #22272e;
+  padding: 50px;
+}
